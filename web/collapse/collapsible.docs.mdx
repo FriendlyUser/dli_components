@@ -1,0 +1,34 @@
+---
+description: A Collapsible component. See https://dev.to/friendlyuser/how-to-make-a-show-more-component-in-react-1ag0 for more details
+---
+
+import { Collapsible } from './collapsible';
+
+In this example, the Collapsible component is a class-based component that uses the React.Component base class. It maintains a state variable called collapsed that determines whether the collapsible content is currently visible or hidden. The component also has a toggleCollapsed method that updates the collapsed state variable when the header is clicked.
+
+The component uses the FontAwesomeIcon component from the @fortawesome/react-fontawesome package to display the caret icon. The icon is determined by the value of the collapsed state variable, with a downward-facing caret icon being displayed when the content is collapsed and an upward-facing caret icon being displayed when the content is expanded.
+
+When the component is rendered, the header and caret icon are always visible, but the content element is only visible if the collapsed state variable is false. This allows the user to click the header to toggle the visibility of the collapsible content.
+
+### Component usage
+```js
+<Collapsible />
+```
+
+### Render hello world!
+
+```js live
+<Collapsible header={<div>"hello world" </div>}>
+    <div>hello world</div>
+</Collapsible>
+```
+
+```js live
+
+<Collapsible header={<div>"hello world" </div>}>
+    <div>hello world</div>
+    <p>
+        When the component is rendered, the header and caret icon are always visible, but the content element is only visible if the collapsed state variable is false. This allows the user to click the header to toggle the visibility of the collapsible content.
+    </p>
+</Collapsible>
+```

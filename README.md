@@ -31,3 +31,9 @@ This removes the components from the bitmap as well as removes the files.
 - **.gitignore**
 
 Ignoring any files from version control
+
+
+to create a new component
+```
+bit create react apps/to-do --scope my-org.tasks-scope 
+```

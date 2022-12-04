@@ -9,6 +9,18 @@
  */
 
 {
+    "collapse": {
+        "scope": "",
+        "version": "",
+        "mainFile": "index.ts",
+        "rootDir": "web/collapse",
+        "config": {
+            "teambit.react/react": {},
+            "teambit.envs/envs": {
+                "env": "teambit.react/react"
+            }
+        }
+    },
     "showmore": {
         "scope": "friendlyuser.web",
         "version": "1.0.3",

@@ -5,7 +5,7 @@ import { faCaretDown, faCaretUp } from '@fortawesome/free-solid-svg-icons';
 // header children react prop types
 export interface CollapsibleProps {
   header?: JSX.Element;
-  children: React.ReactChildren
+  children: any;
 }
 
 export function Collapsible(props: CollapsibleProps) {
@@ -28,13 +28,18 @@ export function Collapsible(props: CollapsibleProps) {
         flexDirection: "row",
       }}>
         {header}
-        <FontAwesomeIcon
-          icon={collapsed ? faCaretDown : faCaretUp}
-          style={{
-            paddingLeft: "3px",
+        <div style={{
+            display: "inlineBlock",
+            width: "0",
+            height: "0",
+            marginLeft: "5px",
+            verticalAlign: "middle",
+            borderTop: "solid 5px black",
+            borderRight: "solid 5px transparent",
+            borderLeft: "solid 5px transparent",
             transform: `rotate(${collapsed ? '0' : '180'}deg)`,
             transition: 'transform 0.25s ease-in-out',
-          }}
+        }}
         />
       </div>
       {!collapsed && <div>{children}</div>}
